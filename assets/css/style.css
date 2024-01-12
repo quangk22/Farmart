@@ -224,7 +224,7 @@ header {
   max-width: var(--with);
   margin: 0px auto;
   display: flex;
-  font-weight: bold;
+
   color: white;
   font-size: 14px;
   align-items: center;
@@ -366,7 +366,6 @@ header {
 
 .header-bottom .menu .menu_items ul li ul li a {
   color: #888888;
-  font-weight: 570;
   font-size: 15px;
   text-wrap: nowrap;
   padding: 0.5rem;
