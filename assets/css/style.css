@@ -430,21 +430,12 @@ header {
 }
 
 /*  */
-.baner {
-  overflow: hidden;
-  position: relative;
-}
 
-.baner img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transform: scale(1.2);
-  transform-origin: 0 0;
-  background-position: 44% 0px;
-}
 .slide1 {
   position: relative;
+}
+.imgBaner {
+  height: 68vh;
 }
 .text-baner {
   position: absolute;
@@ -477,10 +468,10 @@ header {
   color: var(--white);
 }
 .swiper-button-next {
-  right: 200px !important;
+  right: 180px !important;
 }
 .swiper-button-prev {
-  left: 200px !important;
+  left: 180px !important;
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
