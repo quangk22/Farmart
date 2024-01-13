@@ -412,18 +412,20 @@
                   <span class="ends-text">Ends in</span>
                   <div class="header-countdown">
                     <div class="farmart-countdown">
-                      <span class="hours timer"
-                        ><span class="digits">17</span
-                        ><span class="text">hours</span
-                        ><span class="divider">:</span></span
-                      ><span class="minutes timer"
-                        ><span class="digits">14</span
-                        ><span class="text">mins</span
-                        ><span class="divider">:</span></span
-                      ><span class="seconds timer"
-                        ><span class="digits">18</span
-                        ><span class="text">secs</span></span
-                      >
+                      <span class="hours timer">
+                        <span class="digits" id="hours">17</span>
+                        <span class="text">hours</span>
+                        <span class="divider">:</span>
+                      </span>
+                      <span class="minutes timer">
+                        <span class="digits" id="minutes">14</span>
+                        <span class="text">mins</span>
+                        <span class="divider">:</span>
+                      </span>
+                      <span class="seconds timer">
+                        <span class="digits" id="seconds">18</span>
+                        <span class="text">secs</span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -731,10 +733,7 @@
             <div class="baner-organic">
               <div class="organic-container">
                 <div class="img-organic">
-                  <img
-                    src="./assets/image/banner-home-4-1-organic.jpg"
-                    alt=""
-                  />
+                  <img src="./assets/image/banner-home-4-1-organic.jpg"alt=""/>
                 </div>
               </div>
               <div class="conten-banner">
@@ -2783,18 +2782,59 @@
     </footer>
     <script>
        var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
       spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+      effect: "fade",
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
     });
+  //  
+    
+    function updateCountdown() {
+   
+    const hoursElement = document.getElementById('hours');
+    const minutesElement = document.getElementById('minutes');
+    const secondsElement = document.getElementById('seconds');
+
+   
+    let hours = parseInt(hoursElement.textContent);
+    let minutes = parseInt(minutesElement.textContent);
+    let seconds = parseInt(secondsElement.textContent);
+
+   
+    if (seconds > 0) {
+      seconds--;
+    } else {
+      seconds = 59;
+      if (minutes > 0) {
+        minutes--;
+      } else {
+        minutes = 59;
+        if (hours > 0) {
+          hours--;
+        } else {
+         
+          clearInterval(countdownInterval);
+          alert('Countdown has ended!');
+        }
+      }
+    }
+
+  
+    hoursElement.textContent = hours.toString().padStart(2, '0');
+    minutesElement.textContent = minutes.toString().padStart(2, '0');
+    secondsElement.textContent = seconds.toString().padStart(2, '0');
+  }
+
+
+  const countdownInterval = setInterval(updateCountdown, 1000);
+    
+    
     </script>
     <link rel="stylesheet" href="./assets/js/swiper-bundle.min.js">
   </body>
