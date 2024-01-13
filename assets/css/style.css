@@ -434,28 +434,7 @@ header {
   overflow: hidden;
   position: relative;
 }
-.button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: var(--with);
-  margin: auto;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: space-between;
-}
-.button button {
-  width: 34px;
-  height: 34px;
-  background-color: #ffffff;
-  border-radius: 3px;
-  color: #222222;
-  font-size: 20px;
-  grid-area: auto;
-  line-height: 34px;
-  text-align: center;
-  border: none;
-}
+
 .baner img {
   width: 100%;
   height: auto;
@@ -473,9 +452,55 @@ header {
   left: 25%;
   transform: translate(-25%, -50%);
 }
+.text-baner3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+}
+.text-baner3 .arrivals {
+  color: var(--white);
+}
+.text-baner3 .farmart-slide-heading {
+  color: var(--white);
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 68px;
+  margin-bottom: 50px;
+}
+.text-baner3 .farmart-slide-description {
+  color: var(--white);
+}
+.swiper-button-next {
+  right: 200px !important;
+}
+.swiper-button-prev {
+  left: 200px !important;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 15px !important;
+  background-color: var(--white);
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #222222;
+}
 .arrivals {
   color: var(--green);
   margin-bottom: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.dailydeal {
+  color: #c1900b;
+  font-size: 16px;
+  line-height: 1px;
+  margin-bottom: 23px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -486,6 +511,14 @@ header {
   grid-area: auto;
   line-height: 39.9999px;
   margin: 0px 0px 15px;
+}
+.farmart-slide-heading2 {
+  color: var(--green);
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 48px;
+  letter-spacing: -1px;
+  margin-bottom: 25px;
 }
 .farmart-slide-description {
   color: #666666;

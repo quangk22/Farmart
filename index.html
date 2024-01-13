@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
     <title>Farmart</title>
   </head>
   <body>
@@ -336,9 +336,9 @@
     </div>
     </header>
     <main>
-      <div class="baner ">
-        <div class="">
-          <div class="slide1 ">
+      <div class="baner swiper mySwiper ">
+        <div class="swiper-wrapper">
+          <div class="slide1  swiper-slide">
           <div class="imgBaner">
             <img src="./assets/image/home_1_slider_2.jpg" alt="" />
           </div>
@@ -354,12 +354,50 @@
             <a href="#" class="ShopNow"> Shop Now </a>
           </div>
           </div>
-        
-      </div>
-        <div class="button">
-          <button ><i class="bx bx-chevron-left"></i></button>
-          <button ><i class="bx bx-chevron-right"></i></button>
+          <div class="slide1  swiper-slide">
+            <div class="imgBaner">
+              <img src="./assets/image/home_1_slider.jpg" alt="" />
+            </div>
+            <div class="text-baner ">
+              <div class="dailydeal">DAILY DEAL</div>
+              <div class="farmart-slide-heading2">
+                Sunchips<br />
+                Whole Grain<br/>
+                Original
+              </div>
+              <div class="farmart-slide-description">
+                <span style="font-size: 30px; color: #ff2400; margin-right: 10px">
+                  <b style="font-size: 17px; position: relative; top: -10px">$</b>19.5
+                </span>
+                <span style="text-decoration: line-through;">
+                  <b style="font-size: 12px; position: relative; top: -5px">$</b>45.9
+                </span>
+              </div>
+              <a href="#" class="ShopNow"> Shop Now </a>
+            </div>
+          </div>
+          <div class="slide1 swiper-slide">
+            <div class="imgBaner">
+              <img src="./assets/image/slider-home-4-2-update.jpg" alt="" />
+            </div>
+            <div class="text-baner3">
+              <div class="arrivals">summer mega sale</div>
+              <div class="farmart-slide-heading">
+                super discount<br />
+                <span style="color: #fec221;">50%</span>OFF
+              </div>
+              <div class="farmart-slide-description">
+                Over 2,000 products sale up to 50% for online exclusive.
+                <br/>
+                Don’t miss out, HURRY UP!
+              </div>
+
+            </div>
+          </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
       <div>
         <section>
@@ -2743,5 +2781,21 @@
         </div>
       </div>
     </footer>
+    <script>
+       var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    </script>
+    <link rel="stylesheet" href="./assets/js/swiper-bundle.min.js">
   </body>
 </html>
